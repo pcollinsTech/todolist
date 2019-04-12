@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class Task extends Model
 {
-    protected $table = 'items';
+        protected $table = 'tasks';
 
         public function items()
         {
-            return $this->belongsTo('App/Task');
+            return $this->hasMany('App/Item');
         }
+
 }

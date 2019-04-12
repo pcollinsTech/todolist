@@ -1,10 +1,11 @@
 <?php
 
+use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
-$factory->define(App\Tasks::class, function (Faker $faker) {
+$factory->define(App\Task::class, function (Faker $faker) {
     return [
-        'title' => $faker->sentance, 
+        'title' => $faker->sentence, 
         'description' => $faker->paragraph, 
     ];
 });
